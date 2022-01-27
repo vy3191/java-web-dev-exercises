@@ -20,11 +20,12 @@ public class Adventures {
 
         if( index > -1) {
             System.out.println("You have found the word "+ searchWord + " in the sentence. And its index is " + index + " and its length is "+ length);
-            for(String eachWord :wordsArr) {
-                if(!eachWord.toLowerCase().equals(searchWord.toLowerCase())) {
-                    new_string += eachWord+ " ";
-                }
-            }
+//            for(String eachWord :wordsArr) {
+//                if(!eachWord.toLowerCase().equals(searchWord.toLowerCase())) {
+//                    new_string += eachWord+ " ";
+//                }
+//            }
+            new_string = sentence.substring(0, index) + sentence.substring(index+length, sentence.length());
             System.out.println("Our new sentence is>>>");
             System.out.println(new_string);
         } else {
