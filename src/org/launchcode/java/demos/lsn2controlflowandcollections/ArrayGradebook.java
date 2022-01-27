@@ -29,12 +29,12 @@ public class ArrayGradebook {
 
         } while(!newStudent.equals(""));
 
-        // Get student grades
-        for (int i = 0; i < numStudents; i++) {
-            System.out.print("Grade for " + students[i] + ": ");
-            double grade = input.nextDouble();
-            grades[i] = grade;
-        }
+            for (int i = 0; i < numStudents; i++) {
+                System.out.print("Grade for " + students[i] + ": ");
+                double grade = input.nextDouble();
+                grades[i] = grade;
+            }
+
 
         // Print class roster
         System.out.println("\nClass roster:");
