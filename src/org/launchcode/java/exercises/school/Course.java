@@ -5,30 +5,44 @@ import java.util.HashMap;
 
 public class Course {
     private int courseId;
-    private ArrayList<String> teachers = new ArrayList<>();
-    private HashMap<Integer, String> students  = new HashMap<>();
+    private Teacher teacher;
+    private ArrayList<Student> students;
+
+    public Course(int courseId, Teacher teacher, ArrayList<Student> students) {
+        this.courseId = courseId;
+        this.teacher = teacher;
+        this.students = students;
+    }
+
+    public Course(int courseId, Teacher teacher) {
+        this(courseId, teacher, new ArrayList<Student>());
+    }
 
     public int getCourseId() {
-        return this.courseId;
+        return courseId;
     }
 
-    public void setCourseId(int aCourseId) {
-        this.courseId = aCourseId;
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
     }
 
-    public ArrayList<String> getTeachers() {
-        return this.teachers;
+    public Teacher getTeacher() {
+        return teacher;
     }
 
-    public void setTeachers(String teacher) {
-        this.teachers.add(teacher);
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 
-    public HashMap<Integer, String> getStudents() {
+    public ArrayList<Student> getStudents() {
         return students;
     }
 
-    public void setStudents(Student aStudent) {
-        this.students.put(aStudent.getNumberOfCredits(), aStudent.getName());
+    public void addStudents(Student aStudent) {
+        this.students.add(aStudent);
+    }
+
+    public void removeStudents(Student aStudent) {
+        this.students.remove(aStudent);
     }
 }

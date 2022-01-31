@@ -25,12 +25,13 @@ public class PracticeArray {
 
         } while(!newStudent.equals(""));
 
-            for(String student: students) {
-                System.out.println("Enter grades for"+ student + ":");
-                Double grade = input.nextDouble();
-                grades[grades.length] = grade;
+        for(String student: students) {
+            System.out.println("Enter grades for"+ student + ":");
+            Double grade = input.nextDouble();
+            grades[grades.length] = grade;
 
-            }
+        }
+
         input.close();
         System.out.println(students);
         System.out.println(grades);
